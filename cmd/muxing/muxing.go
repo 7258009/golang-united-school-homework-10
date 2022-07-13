@@ -52,7 +52,7 @@ func GetErr(resp http.ResponseWriter, req *http.Request) {
 func PostParam(resp http.ResponseWriter, req *http.Request) {
 	resp.WriteHeader(http.StatusOK)
 	body, _ := io.ReadAll(req.Body)
-	fmt.Fprintf(resp, "message received:\n%v", string(body))
+	fmt.Fprintf(resp, "I got message:\n%v", string(body))
 }
 
 func PostHeaders(resp http.ResponseWriter, req *http.Request) {
